@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS| Grid</title>
+    <style>
+
+[class*="col--"] {
+  float: left;
+display: none;
+  border: 1px solid red;
+  width: 25%;
+}
+.logo{
+    text-align:center;
+    padding:15px;
+    background-color: aquamarine;
+}
+.col-1{
+    width:30%;
+    float:left;
+    margin-bottom:30px;
+
+}
+.col-2{
+
+    width:67%;
+    float:right;
+}
+.paragraf{
+ margin-top: 25px;
+ padding-top: 20px;
+}
+.menu{
+    background-color: blueviolet;
+    margin-top: 30px;
+
+}
+
+    </style>
+</head>
+<body>
+<!-- grid bermain dengan display dan width -->
+     <div class="content col--1">
+        Col-1
+    </div>
+    <div class="content col--2">
+        Col-2
+    </div>
+    <div class="content col--3">
+        Col-3
+    </div>
+    <div class="content col--4">
+        Col-4
+    </div> 
+   
+
+    <hr>
+    <div class="logo">My Website</div>
+    <div class="menu col-1">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </div>
+    <div class="paragraf col-2 p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi quibusdam beatae exercitationem aut facilis impedit quam aperiam animi, sunt, omnis tempore voluptatem aspernatur unde rem veniam deserunt illo explicabo?</div>
+    <div class="col-1"></div>
+    <div class=" col-2 p">
+        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto rem vel numquam, impedit harum ipsum? Amet quaerat, minima quod modi esse assumenda pariatur itaque repellat. Quaerat recusandae veniam reiciendis pariatur!</p>
+       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quas, distinctio labore, totam ex nostrum quos laboriosam maxime error sequi ipsum voluptatem vel veniam impedit? Natus voluptate sit ullam aliquam.</p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis et dolorem nulla illum modi dolores ratione fugit provident ipsum facilis culpa at, doloremque libero consequuntur explicabo iusto quod nihil esse!</p>
+    </div>
+</body>
+</html>
