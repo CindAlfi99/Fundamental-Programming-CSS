@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+   <style>
+       .banner{
+           padding:20px;
+           /* background-color: yellow; */
+       }
+   </style>
+</head>
+<body>
+    <div id="banner" class="banner" style="background-color: yellow;"><center>SELAMAT DATANG</center></div>
+    <button onclick="color()">Ganti background</button><br>
+
+    <input type="text" class="input" /><button onclick="btn()">Tambah</button>
+<ul id="ul"></ul>
+
+    <script>
+  function color(){
+
+    let Color= document.getElementById('banner').style.backgroundColor;
+ if(Color==="yellow"){
+      document.getElementById('banner').style.background = "green";
+
+    }else if(Color=="green"){
+    
+      document.getElementById('banner').style.background = "red";
+
+    }else if(Color=="red"){
+        document.getElementById('banner').style.background = "pink";  
+    }
+    
+  }
+  function btn(){
+    var li = document.createElement('li');
+     var input = document.getElementsByClassName('input').value;
+     var text = document.createTextNode(input);
+     li.appendChild(text);
+   document.getElementById('ul').appendChild(li);
+   document.getElementsByClassName('input').value="";
+  
+
+  }
+
+  
+
+    </script>
+</body>
+</html>

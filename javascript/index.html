@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        h1 {
+            color: blue;
+            text-align: right;
+        }
+        
+        #my-id {
+            color: red;
+            text-align: center
+        }
+        
+        .my-class {
+            color: green !important;
+            text-align: left;
+        }
+        
+        .my-second-class {
+            font-size: 2rem;
+            color: blue;
+        }
+    </style>
+
+  
+</head>
+
+<body>
+
+    <h1>Hello World!</h1>
+    <p>Headingnya dibuat dengan CSS.</p>
+
+    <p class="my-class my-second-class">Paragraf ini menggunakan selector class untuk CSS</p>
+    <p id="my-id">Paragraf ini menggunakan selector ID untuk CSS</p>
+    <hr>
+    <h1>Biodata</h1>
+
+    <p>Name: <span id="my-name"></span></p>
+    <p>Borndate: <span id="my-borndate"></span></p>
+    <p>Zodiac: <span id="my-zodiac"></span></p>
+    <p>Hobby: <span id="my-hobbies"></span></p>
+
+    <hr>
+     <p>Event</p>
+    <p>Date: <span id="my-date"></span></p>
+    <button onclick="document.getElementById('my-date').innerHTML= Date()">
+        Klik disini untuk merubah tanggal di atas
+    </button>
+    <button onclick="this.innerHTML= Date()">
+        Klik disini untuk merubah tanggal di atas
+    </button>
+
+    <script>
+
+        //innerHTML element
+        function sayHallo(name){
+            document.getElementById('my-id').innerHTML = "Hello "+ name + ":)";
+        }
+//innerHTML
+        const txt = "cindi";
+        sayHallo(txt);
+
+        function Bio(text){
+            document.getElementById('my-name').innerHTML =text.nama;
+            document.getElementById('my-borndate').innerHTML =text.born;
+            document.getElementById('my-zodiac').innerHTML =text.zodiac;
+            document.getElementById('my-hobbies').innerHTML =text.hobbies;
+        }
+
+        let text = {
+            nama:"cindi",
+            born:"16 Mei 1999",
+            zodiac:"--",
+            hobbies:"belajar"
+        };
+
+        Bio(text);
+
+        //Event
+        
+
+ 
+    </script>
+
+</body>
+</html>
